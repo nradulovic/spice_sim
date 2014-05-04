@@ -1,0 +1,209 @@
+=====================================================================
+Kreirao: Nenad Radulović
+
+Izmena : 
+		a: 13.02.2011, Nenad
+			Kreiranje dokumenta
+		b: 18.02.2011, Nenad
+			Dodata pravila za Thermal Design, VBE bias
+		c: 16.03.2011, Nenad
+			Dodata pravila za drajverska kola
+=====================================================================
+
+
+Imenovanje SPICE projekata:
+	Format:
+		SIMxxxx - aaa,bbb,ccc,... - {Ime projekta}
+
+	gde je:
+		xxxx - redni broj projekta, on se stalno inkrementira
+		aaa - kodni naziv za strukturu u projektu
+
+
+Kodni nazivi za strukturu:
+	Audio Amplifiers - AA
+		AAB - Audio Amplifier Buffer
+			AABabc
+
+			gde je:
+				a - pojacanje, znak
+					n - non-inverting
+					i - inverting
+				b - pojačanje, amplituda
+				c - broj kanala
+
+		AAT - Audio Tone control, analog
+			AATab
+
+			gde je:
+				a - broj kontrola
+				b - broj kanala
+
+		AAV - Audio Volume control
+			AAVab
+
+			gde je:
+				a - broj kanala
+				b - način ostvarivanja kontrole
+					p - potenciometar
+					g - PGA kolo
+
+		AAD - Audio volume and/or Tone control, digital
+			AADa
+
+			gde je:
+				a - broj kanala
+
+		AAP - Audio amplifier for Phones
+
+
+	Driver Circuit - DRV
+		DRVabc
+		
+		gde je:
+			a - napona napajanja
+				a - AC, naizmenični napon
+				d - DC, jednosmerni napon
+				
+			b - tip prekidačkog elementa
+				f - FET, neki tip FET tranzistora, uglavnom, MOSFET
+				q - BJT, tranzistor
+				s - SCR, tiristor
+				t - trijak
+				i - IC kolo
+				
+			c - obrada ulaznog signala
+				d - direktno preslikavanje ulaza na izlaz (nema logičkih kola)
+				s - SHIFT, upotrebljena je neki vid SHIFT logike
+				l - LATCH, upotrebljena je logika za pamćenje stanja
+
+
+	Audio Power Amplifiers - PA
+		PAA - Power Amplifier - class A
+		PAB - Power Amplifier - class B
+			PABabcd
+			
+			gde je:
+				a - broj stepena u pojačavaču
+				b - ulazni stepen
+					b - BJT single ended LTP
+					B - BJT symmetrical LTP
+					f - FET single ended LTP
+					c - BJT single ended current feedback
+					C - BJT symmetrical current feedback
+					i - IC based input
+				c - naponski pojačavač
+					b - non-symmetrical transimpedance stage
+					B - symmetrical transimpedance stage
+					d - differential transimpedance stage
+					i - IC based transimpedance
+				d - tip izlaznih uređaja
+					b - BJT
+					h - HEXFET MOSFET
+					l - lateral MOSFET
+					i - IC based BJT
+					I - IC based MOSFET
+				
+		PAH - Power Amplifier - class H
+		PAG - Power Amplifier - class G
+		PAD - Power Amplifier - class D
+			PADab		
+		
+			gde je:
+				a - Ulazni stepen
+					i - IC bazirani ulaz
+				b - Izlazni stepen
+					h - HEXFET MOSFET
+					i - IC bazirani izlaz
+
+
+	Power Amplifier Accessory - PC
+		PCD - Power Amplifier DC offset compesation
+			PCDa
+
+			gde je:
+				a - tip kompenacije
+					p - pasivna korekcija, potenciometar
+					a - aktivna korekcija
+
+		PCO - Power Amplifier DC detector and protection
+		PCP - Power Amplifier shortcircuit/SOA protection
+			PCPa
+
+			gde je:
+				a - stepen zaštite
+					i - jednostavno kolo zaštite od maksimalne struje
+					v - Ic/Vce zaštitno kolo, prvog reda
+					V - Ic/Vce zaštitno kolo, drugog reda
+					w - Ic/Vce zaštitno kolo, trećeg reda
+
+		PCT - Power Amplifier Temperature protection
+			PCTa
+
+			gde je:
+				a - stepen zaštite/merenje temperature
+					l - linearna zavisnost napona od temperature
+					n - nelinearna zavisnost napona od temperature
+					d - diskretna zavisnost napona od temperature
+
+		PCC - Power Amplifier Clipping detector/protection
+		PCM - Power Amplifier Mute facility
+		PCZ - Power Amplifier Low Z at output detector
+		PCV - Power Amplifier low power Voltage detector
+
+
+	Prototype - PR
+		PRB - Proto pločica sa Bootload-erom
+		PRE - Proto pločica sa ekspanizionim konektorima
+		PRI - Proto pločica sa ICP, ISP-om (In Circuit/System Programming)
+		PRL - Proto pločica sa LCD displejom
+			PRLa
+
+			gde je:
+				a - tip displeja
+					a - alfanumerički displej
+					g - grafički displej
+					t - TFT colour displej
+					
+		PRM - Proto pločica sa mikrokontrolerom
+		PRT - Proto pločica sa tastaturom
+			PRTa
+
+			gde je:
+				a - tip tastature
+					t - tastatura realizovana tasterima
+					c - tastatura realizovana kapacitivnim poljima
+					
+		PRU - Proto pločica sa USB konektorom
+
+		
+	Power Supplies - PS
+		PSL - Power Supply, Linear
+			PSLab
+			
+			gde je:
+				a - simetričnost
+					s - symmetrical, parovi izlaza
+					n - non-symmetrical, jedan izlaz
+					m - multi outputs, više različitih izlaza
+				b - regulacija
+					r - regulated
+					n - non-regulated
+
+		PSW - Power Supply, switch
+			PSWa
+			
+			gde je:
+				a - simetričnost
+					s - symmetrical, parovi izlaza
+					n - non-symmetrical, jedan izlaz
+					m - multi outputs, više različitih izlaza
+
+
+	Thermal Design - TD
+		TDB - Thermal Design, Amplifiers. Bias spreader
+			TDBab
+
+			gde je:
+				a - broj bias napona koji spreder pokriva
+				b - broj senzora koji prate temperaturu
