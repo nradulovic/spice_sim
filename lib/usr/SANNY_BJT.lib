@@ -1,0 +1,13 @@
+*******************************************************************************
+* NPN BJT models
+*******************************************************************************
+* Bordodynov posted it in LTspice Yahoo group
+* 10.12.2010
+.model 2SA1406 pnp (IS=10.1F NF=1 BF=390 VAF=254 IKF=60M ISE=2.6P NE=2 BR=4 NR=1 VAR=16 IKR=90M RE=1.88 RB=7.53 RC=.753 XTB=1.5 CJE=16.8P VJE=1.1 MJE=.5 CJC=5.44P VJC=.3 MJC=.3 TF=397P TR=276N VCEO=200 ICrating=100m MFG=Sanyo)
+
+*******************************************************************************
+* PNP BJT models
+*******************************************************************************
+* Bordodynov posted it in LTspice Yahoo group
+* 10.12.2010
+.model 2SC3600 npn (IS=20.9f BF=95 VAF=80 IKF=1.9 BR=0.2138 VAR=20 IKR=0.5 RB=4.0 RBM=4.0 RE=0.4 RC=3 CJE=5.84p VJE=0.5 MJE=0.3083 TF=340p XTF=1 VTF=10.0 ITF=8 PTF=0 CJC=5.32p VJC=0.5 MJC=0.3271 XCJC=0.5 TR=10n XTB=2.3 EG=1.11 XTI=3 FC=0.5 MFG=Sanyo)

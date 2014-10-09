@@ -1,0 +1,4 @@
+* BRIDGE35A	(Diodes, Inc. GBPC3502 200V) - copyright Cordell Audio November 23, 2010
+* created November 23, 2010 copyright Cordell Audio
+.model GBPC3502 D(Is=20000n Rs=.006 N=2.4 EG=1.3 XTI=.5 BV=200 IBV=1e-05 Cjo=500p Vj=1.3 M=.45 tt=4u Iave=4 Vpk=200 mfg=CA112310)
+
