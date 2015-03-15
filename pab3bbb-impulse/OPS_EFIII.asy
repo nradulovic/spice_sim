@@ -1,1 +1,0 @@
-../SIM0012 - EF OPS3 T1/OPS_EFIII.asy

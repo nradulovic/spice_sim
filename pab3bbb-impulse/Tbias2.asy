@@ -1,1 +1,0 @@
-../SIM0004 - TDB42 - VBE bias/Tbias2.asy
