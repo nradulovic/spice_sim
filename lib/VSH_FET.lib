@@ -1,0 +1,9 @@
+*
+* IRFP240C VDMOS   copyright Cordell Audio December 6, 2010
+.model CA_IRFP240C VDMOS(nchan Vto=4.0 Kp=4.8 Lambda=0.0032 Rs=0.01 Rd=0.1 Rds=1e7 Cgdmax=2600p Cgdmin=10p a=0.35 Cgs=1250p Cjo=3000p m=0.75 VJ=2.5 IS=4.0E-06 N=2.4)
+*
+* IRFP9240C VDMOS   copyright Cordell Audio December 6, 2010
+.model CA_IRFP9240C VDMOS(pchan Vto=-3.76 Kp=9 Lambda=0.004 Rs=0.064 Rd=0.1 Rds=1e7 Cgdmax=1200p Cgdmin=15p a=0.26 Cgs=1130p Cjo=2070p m=0.68 VJ=2.5 IS=4.0E-06 N=2.4)
+*
+* DIRFP240 IRFP240 Body Diode - copyright Cordell Audio November 23, 2010
+.model DIRFP240 D(Is=5n Rs=.01 N=1.4 Cjo=1700p M=.6 tt=45n Iave=1 Vpk=200 mfg=CA112410)
