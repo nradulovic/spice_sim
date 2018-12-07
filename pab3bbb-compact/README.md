@@ -14,7 +14,8 @@ It has two types of boards:
  - Amplifier board: Mono channel.
  - Power supply board with speaker protection & mute and LED indication.
 
-The complete model of the amplifier is based on Dayens Ampino power amplifier.
+The complete model of the amplifier case layout is based on Dayens Ampino power 
+amplifier.
 
 Amplifier board
 ===============
